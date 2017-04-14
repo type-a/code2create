@@ -8,12 +8,8 @@ PVector sanFrancisco;
 void setup() {
   size(400, 310);
   smooth();
-  
-  // World map from http://en.wikipedia.org/wiki/File:Mercator-projection.jpg 
   worldMapImage = loadImage("400px-Mercator-projection.jpg");
-  // Using default bounding box
   mercatorMap = new MercatorMap(400, 310);
-  
   berlin = mercatorMap.getScreenLocation(new PVector(52, 13));
   sydney = mercatorMap.getScreenLocation(new PVector(-33.86, 151.21));
   sanFrancisco = mercatorMap.getScreenLocation(new PVector(37.8, -122.4));
