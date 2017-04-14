@@ -1,29 +1,30 @@
 PImage worldMapImage;
 MercatorMap mercatorMap;
 
-PVector berlin;
-PVector sydney;
-PVector sanFrancisco;
+PVector NY;
+PVector HongKong;
+PVector Bangalore;
 
-void setup() {
-  size(400, 310);
+void setup() 
+{
+  size(400,310);
   smooth();
   worldMapImage = loadImage("400px-Mercator-projection.jpg");
   mercatorMap = new MercatorMap(400, 310);
-  berlin = mercatorMap.getScreenLocation(new PVector(52, 13));
-  sydney = mercatorMap.getScreenLocation(new PVector(-33.86, 151.21));
-  sanFrancisco = mercatorMap.getScreenLocation(new PVector(37.8, -122.4));
+  NY = mercatorMap.getScreenLocation(new PVector(40.71,-74));
+  HongKong = mercatorMap.getScreenLocation(new PVector(22.39,114.11));
+  Bangalore = mercatorMap.getScreenLocation(new PVector(12.97,77.59));
 }
 
-void draw() {
+void draw() 
+{
   image(worldMapImage, 0, 0, width, height);
 
   noStroke();
-  fill(255, 0, 0, 100);
+  fill(255, 0, 0, 200);
   
-  ellipse(berlin.x, berlin.y, 6, 6);
-  ellipse(sydney.x, sydney.y, 6, 6);
-  ellipse(sanFrancisco.x, sanFrancisco.y, 6, 6);
+  ellipse(NY.x, NY.y, 6, 6);
+  ellipse(HongKong.x, HongKong.y, 6, 6);
+  ellipse(Bangalore.x, Bangalore.y, 6, 6);
 }
-
 
