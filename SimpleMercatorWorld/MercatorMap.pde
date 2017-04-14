@@ -1,9 +1,6 @@
 /**
  * Utility class to convert between geo-locations and Cartesian screen coordinates.
- * Can be used with a bounding box defining the map section.
- *
- * (c) 2011 Till Nagel, tillnagel.com
- */
+ * Can be used with a bounding box defining the map
 public class MercatorMap {
   
   public static final float DEFAULT_TOP_LATITUDE = 80;
