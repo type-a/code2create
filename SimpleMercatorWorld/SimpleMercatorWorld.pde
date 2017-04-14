@@ -19,7 +19,7 @@ void draw() {
   image(worldMapImage, 0, 0, width, height);
 
   noStroke();
-  fill(255, 0, 0, 200);
+  fill(255, 0, 0, 100);
   
   ellipse(berlin.x, berlin.y, 6, 6);
   ellipse(sydney.x, sydney.y, 6, 6);
